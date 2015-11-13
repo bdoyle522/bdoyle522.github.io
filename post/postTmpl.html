@@ -1,0 +1,21 @@
+<div>
+
+<h1>List your apartment</h1>
+
+<form>
+
+	<select ng-model="location" ng-options="location for location in locations">
+		<option value="">Location</option>
+	</select>
+	<input type="text" placeholder="Monthly Rent" ng-model="rent">
+	<select ng-model="sex" ng-options="sex for sex in sex">
+		<option value="">Male/Female</option>
+	</select>
+	<select ng-model="bathrooms" ng-options="bathrooms for bathrooms in bathrooms">
+		<option value=""># Bathrooms</option>
+	</select>
+
+</form>
+
+
+</div>

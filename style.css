@@ -1,0 +1,29 @@
+body {
+	background-image: url('lakeaustin.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.homeTitle {
+	text-align: center;
+	font-size: 70px;
+	margin-top: 100px;
+}
+
+.homeTextBox {
+	font-size: 10px;
+	text-align: center;
+	border: 1px solid;
+	padding: 10px;
+	margin-right: 30%;
+	margin-left: 30%;
+	background-color: white;
+	border-radius: 25px;
+}
+
+.homeButton {
+	text-align: center;
+	font-size: 40px;
+	border-radius:20px;
+}
