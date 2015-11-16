@@ -1,18 +1,45 @@
-<div class="Home">
-
+<div class="navbar-header">
+	<img src="http://openweathermap.org/img/w/{{weather.icon}}.png">
 	<div>
-		{{weather}}
+		{{weather.id}}
+		{{weather.description}}
+		{{weather.main}}
 	</div>
-
-<h1 class="homeTitle">Longhorn Subleasing</h1>
-<div class="homeTextBox">
-	Ease of connection for college students that want to sublet their apartment or room, or want to rent an apartment or room, for less than the typical year-long lease period. No fee, just a simple way to guarantee you won't be contacted by a sketchball off craigslist
 </div>
 
-<div class="homeTitle">
-	<a ui-sref='postSublet'><button class="homeButton">Make a Listing</button></a>
-	<a ui-sref='browse'><button class="homeButton">Browse Listings</button></a>
-	<a><button class="homeButton" ng-click="randy()">Randy Marsh Quote</button></a>
+<div class="jumbotron">
+
+	<h1 class="homeTitle">Longhorn Subleasing</h1>
+	<div class="homeTextBox">
+	Ease of connection for college students that want to sublet their apartment or room, or want to rent an apartment or room, for less than the typical year-long lease period. No fee, just a simple way to guarantee you won't be contacted by a sketchball off craigslist
+	</div>
+
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<h2>Find a Renter</h2>
+			Did you finish up school a semester earlier than you thought? Are you planning on studying abroad for a semester but you're locked into a full year?
+			<div>
+				<a ui-sref='postSublet'><button class="btn-default column">Post a Listing</button></a>
+			</div>
+		</div>
+		<div class="col-md-4"> 
+			<h2>Find A Short Term Lease</h2>
+			Did you decide to take on an extra minor? Want to see at least one successful football season? Fail macro?
+			<div>
+				<a ui-sref='browse'><button class="btn-default column">Browse Listings</button></a>
+			</div>
+		</div>
+		<div class="col-md-4"> 
+			<h2>Why Am I Here?</h2>
+			Did you come across this website by accident? Does this website suck? Do you want to feel like you came away with something from visiting this site?
+			<div>
+				<a><button class="btn-default column" ng-click="randy()">Randy Marsh Quote</button></a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div ng-show="showQuote" class="homeTextBox">

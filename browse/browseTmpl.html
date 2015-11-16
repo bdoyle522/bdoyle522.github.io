@@ -1,13 +1,28 @@
 <div>
 
-<h1>Need an apartment?</h1>
+<h1>Sublet Finder</h1>
 
-<li ng-repeat="list in listings" class="listing">
-	<ul>Location: {{list.newApartment.location}}</ul>
-	<ul>Bathroom: {{list.newApartment.bathroom}}</ul>
-	<ul>Monthly: ${{list.newApartment.rent}}</ul>
-	<ul>Sex: {{list.newApartment.sex}}</ul>
-</li>
+<table class="table active">
+	<thead>
+		<tr>
+			<th> </th>
+			<th>Location</th>
+			<th>Bathroom</th>
+			<th>Rent</th>
+			<th>Sex</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="list in listings">
+			<td >
+			<img src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
+			<td><h2>{{list.newApartment.complex}}<small>({{list.newApartment.location}})</small><h2></td>
+			<td>{{list.newApartment.bathroom}}</td>
+			<td>${{list.newApartment.rent}}</td>
+			<td>{{list.newApartment.sex}}</td>
+		</tr>
+	</tbody>
+</table>
 
 <div>
 <a ui-sref='postSublet' class="listing">Post Your Sublet</a>

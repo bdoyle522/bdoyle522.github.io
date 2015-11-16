@@ -16,7 +16,7 @@ app.controller('homeCtrl', function($scope, currentWeather){
 	};
 
 
-	$scope.weather = currentWeather.data.weather;
+	$scope.weather = currentWeather;
 
 
 });

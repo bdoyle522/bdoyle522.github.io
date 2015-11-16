@@ -1,23 +1,22 @@
 <div>
 
-<h1 class="homeTitle">List your apartment</h1>
+<h1>List Your Apartment</h1>
+<form class="form-group">
 
-<form class="homeTextBox">
-
-	<select ng-model="apartment.location" ng-options="location for location in locations" required>
+	<select class="form-control" ng-model="apartment.location" ng-options="location for location in locations" required>
 		<option value="">Location</option>
 	</select>
-	$<input ng-model="apartment.rent" type="text" placeholder="Monthly Rent" required>
-	<select ng-model="apartment.sex" ng-options="sex for sex in sexes" required>
+	<input class="form-control" ng-model="apartment.rent" type="text" placeholder="$Monthly Rent" required>
+	<select class="form-control" ng-model="apartment.sex" ng-options="sex for sex in sexes" required>
 		<option value="">Male/Female</option>
 	</select>
-	<select ng-model="apartment.bathroom" ng-options="bathroom for bathroom in bathrooms" required>
+	<select class="form-control" ng-model="apartment.bathroom" ng-options="bathroom for bathroom in bathrooms" required>
 		<option value="">Bathroom</option>
 	</select>
-	<select ng-model="apartment.pets" ng-options="option for option in petOptions" required>
+	<select class="form-control" ng-model="apartment.pets" ng-options="option for option in petOptions" required>
 		<option value="">Pets</option>
 	</select>
-	<button ng-click="submitApartment(apartment)" ui-sref='browse'>Post Sublet</button>
+	<button ng-click="submitApartment(apartment)" class="btn-success" ui-sref='browse'>Post Sublet</button>
 
 </form>
 
