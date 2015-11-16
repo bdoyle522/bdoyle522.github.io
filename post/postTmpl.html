@@ -1,19 +1,23 @@
 <div>
 
-<h1>List your apartment</h1>
+<h1 class="homeTitle">List your apartment</h1>
 
-<form>
+<form class="homeTextBox">
 
-	<select ng-model="location" ng-options="location for location in locations">
+	<select ng-model="apartment.location" ng-options="location for location in locations" required>
 		<option value="">Location</option>
 	</select>
-	<input type="text" placeholder="Monthly Rent" ng-model="rent">
-	<select ng-model="sex" ng-options="sex for sex in sex">
+	$<input ng-model="apartment.rent" type="text" placeholder="Monthly Rent" required>
+	<select ng-model="apartment.sex" ng-options="sex for sex in sexes" required>
 		<option value="">Male/Female</option>
 	</select>
-	<select ng-model="bathrooms" ng-options="bathrooms for bathrooms in bathrooms">
-		<option value=""># Bathrooms</option>
+	<select ng-model="apartment.bathroom" ng-options="bathroom for bathroom in bathrooms" required>
+		<option value="">Bathroom</option>
 	</select>
+	<select ng-model="apartment.pets" ng-options="option for option in petOptions" required>
+		<option value="">Pets</option>
+	</select>
+	<button ng-click="submitApartment(apartment)" ui-sref='browse'>Post Sublet</button>
 
 </form>
 

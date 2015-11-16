@@ -27,3 +27,8 @@ body {
 	font-size: 40px;
 	border-radius:20px;
 }
+
+.listing {
+	text-align: center;
+	background-color: white;
+}

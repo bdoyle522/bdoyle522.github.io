@@ -1,5 +1,9 @@
 <div class="Home">
 
+	<div>
+		{{weather}}
+	</div>
+
 <h1 class="homeTitle">Longhorn Subleasing</h1>
 <div class="homeTextBox">
 	Ease of connection for college students that want to sublet their apartment or room, or want to rent an apartment or room, for less than the typical year-long lease period. No fee, just a simple way to guarantee you won't be contacted by a sketchball off craigslist
@@ -7,14 +11,13 @@
 
 <div class="homeTitle">
 	<a ui-sref='postSublet'><button class="homeButton">Make a Listing</button></a>
-	<a><button class="homeButton">Browse Listings</button></a>
+	<a ui-sref='browse'><button class="homeButton">Browse Listings</button></a>
 	<a><button class="homeButton" ng-click="randy()">Randy Marsh Quote</button></a>
 </div>
 
-<div ng-show="showQuote">
+<div ng-show="showQuote" class="homeTextBox">
 
 	<h1>{{randyQuote}}<h1>
-
 
 </div>
 

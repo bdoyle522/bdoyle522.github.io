@@ -1,0 +1,14 @@
+<div>
+
+<h1>Need an apartment?</h1>
+
+<li ng-repeat="list in listings" class="listing">
+	<ul>Location: {{list.newApartment.location}}</ul>
+	<ul>Bathroom: {{list.newApartment.bathroom}}</ul>
+	<ul>Monthly: ${{list.newApartment.rent}}</ul>
+	<ul>Sex: {{list.newApartment.sex}}</ul>
+</li>
+
+<div>
+<a ui-sref='postSublet' class="listing">Post Your Sublet</a>
+</div>
