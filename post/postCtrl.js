@@ -1,6 +1,6 @@
 var app = angular.module('longhornSublease');
 
-app.controller('postCtrl', function($scope, postService, $firebaseArray, $firebaseObject){
+app.controller('postCtrl', function($scope, postService, $firebaseArray, $firebaseObject, $state){
 
 	$scope.locations = postService.getLocations();
 
@@ -17,6 +17,7 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
 	var listing = $firebaseArray(ref);
 
 	$scope.submitApartment = function(newApartment) {
+    console.log(newApartment);
 		newApartment.startDate = dateConvert($scope.dt.start);
 		newApartment.endDate = dateConvert($scope.dt.end);
 		console.log(newApartment);
@@ -24,20 +25,21 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
 			newApartment
 		}).then(function(ref){
 			alert('Your sublet has been successfully added!');
+      $state.go('browse');
 		}).catch(function(err){
 			alert('err');
 		});
 	};
 
-	var dateConvert = function(date){
-		var stringDate = [];
+	 var dateConvert = function(date){
+		var stringDate = {};
 		stringDate.day = date.getDate();
 		stringDate.month = date.getMonth()+1;
 		stringDate.year = date.getFullYear();
 		return stringDate;
 	}
 
-	$scope.today = function() {
+	 $scope.today = function() {
     	$scope.dt = new Date();
   	};
   	$scope.today();
@@ -59,6 +61,8 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
     	$scope.dt = new Date(year, month, day);
   	};
 
+    $scope.date = '11/17/2015';
+
 
   	$scope.dateOptions = {
     	formatYear: 'yy',
@@ -70,6 +74,8 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
   	$scope.status = {
    		opened: false
   	};
+
+
 
   	var tomorrow = new Date();
   	tomorrow.setDate(tomorrow.getDate() + 1);

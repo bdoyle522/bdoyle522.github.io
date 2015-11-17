@@ -1,9 +1,10 @@
-<div class="navbar">
-	<img src="http://openweathermap.org/img/w/{{weather.icon}}.png">
+<div class="container">
+<div class="nav">
+<!-- 	<img src="http://openweathermap.org/img/w/{{weather.icon}}.png">
 	<div>
-<!-- 		{{weather.description}} -->
+
 		{{weather.main}}
-	</div>
+	</div> -->
 </div>
 
 <div class="jumbotron">
@@ -21,21 +22,21 @@
 			<h2>Find a Renter</h2>
 			Did you finish up school a semester earlier than you thought? Are you planning on studying abroad for a semester but you're locked into a full year?
 			<div>
-				<a ui-sref='postSublet'><button class="btn-default column">Post a Listing</button></a>
+				<a ui-sref='postSublet' class="btn btn-default">Post a Listing</a>
 			</div>
 		</div>
 		<div class="col-md-4"> 
 			<h2>Find A Short Term Lease</h2>
 			Did you decide to take on an extra minor? Want to see at least one successful football season? Fail macro?
 			<div>
-				<a ui-sref='browse'><button class="btn-default column">Browse Listings</button></a>
+				<a ui-sref='browse' class="btn btn-default">Browse Listings</a>
 			</div>
 		</div>
 		<div class="col-md-4"> 
 			<h2>Why Am I Here?</h2>
 			Did you come across this website by accident? Do you want to feel like you came away with something from visiting this site?
 			<div>
-				<a><button class="btn-default column" ng-click="randy()">Randy Marsh Quote</button></a>
+				<a class="btn btn-default" ng-click="randy()">Randy Marsh</a>
 			</div>
 		</div>
 	</div>
@@ -44,6 +45,8 @@
 <div ng-show="showQuote" class="homeTextBox">
 
 	<h1>{{randyQuote}}<h1>
+
+</div>
 
 </div>
 
