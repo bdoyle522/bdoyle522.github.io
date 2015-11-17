@@ -15,10 +15,6 @@ app.service('homeService', function(fb, $stateParams, $http, $q){
 		return dfd.promise;
 	};
 
-	// this.getIcon = function () {
-		
-	// }
-
 	function interpret(response){
 		var result = [];
 		console.log(response[0]);

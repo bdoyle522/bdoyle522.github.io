@@ -13,9 +13,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller: 'homeCtrl',
 			resolve: {
 				currentWeather: function (homeService, $stateParams){
-							return homeService.getWeather();
-						}
-				},
+						return homeService.getWeather();
+				}
+			},
 		})
 		.state('postSublet', {
 			url: '/postSublet',
@@ -29,6 +29,16 @@ app.config(function($stateProvider, $urlRouterProvider){
 			resolve: {
 				listingsRef: function(browseService, $stateParams) {
 					return browseService.getListings();
+				},
+			}
+		})
+		.state('posting', {
+			url: '/posts/:postId',
+			templateUrl: 'posting/postingTmpl.html',
+			controller: 'postingCtrl',
+			resolve: {
+				postingRef: function($stateParams, postingService){
+					return postingService.getPost(postId);
 				},
 			}
 		});

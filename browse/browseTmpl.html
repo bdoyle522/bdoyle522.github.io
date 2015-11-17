@@ -6,17 +6,26 @@
 	<thead>
 		<tr>
 			<th> </th>
-			<th>Location</th>
-			<th>Bathroom</th>
-			<th>Rent</th>
-			<th>Sex</th>
+			<th>Location</a>
+			</th>
+			<th>
+				Bathroom
+			</th>
+			<th>
+				Rent
+			</th>
+			<th>
+				Sex
+			</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="list in listings">
-			<td >
-			<img src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
-			<td><h2>{{list.newApartment.complex}}<small>({{list.newApartment.location}})</small><h2></td>
+		<input type="text" ng-model="search" placeholder="Search...">
+		<tr ng-repeat="list in listings | filter: search">
+			<td>
+			<img class="img-responsive" src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
+			<td><h2><a ui-sref='posting({postId: list.newApartment.$id})'>
+				{{list.newApartment.complex}}<small>({{list.newApartment.location}})</small></a><h2></td>
 			<td>{{list.newApartment.bathroom}}</td>
 			<td>${{list.newApartment.rent}}</td>
 			<td>{{list.newApartment.sex}}</td>

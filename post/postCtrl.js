@@ -10,6 +10,8 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
 
 	$scope.petOptions = postService.getPetOptions();
 
+	$scope.washOptions = postService.getWashOptions();
+
 	
 	var ref = new Firebase('https://longhornsublease.firebaseio.com/');
 	var listing = $firebaseArray(ref);

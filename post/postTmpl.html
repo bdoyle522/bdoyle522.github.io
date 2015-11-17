@@ -6,7 +6,8 @@
 	<select class="form-control" ng-model="apartment.location" ng-options="location for location in locations" required>
 		<option value="">Location</option>
 	</select>
-	<input class="form-control" ng-model="apartment.rent" type="text" placeholder="$Monthly Rent" required>
+	<input class="form-control" ng-model="apartment.complex" type="text" placeholder="Apartment Complex" required>
+	<input class="form-control" ng-model="apartment.rent" type="text" placeholder="Monthly Rent" required>
 	<select class="form-control" ng-model="apartment.sex" ng-options="sex for sex in sexes" required>
 		<option value="">Male/Female</option>
 	</select>
@@ -15,6 +16,9 @@
 	</select>
 	<select class="form-control" ng-model="apartment.pets" ng-options="option for option in petOptions" required>
 		<option value="">Pets</option>
+	</select>
+	<select class="form-control" ng-model="apartment.washer" ng-options="option for option in washOptions" required>
+		<option value="">Washer/Dryer</option>
 	</select>
 	<button ng-click="submitApartment(apartment)" class="btn-success" ui-sref='browse'>Post Sublet</button>
 
