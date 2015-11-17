@@ -28,6 +28,14 @@ app.service('postService', function($firebase){
 		return washOptions;
 	};
 
+	// this.getDate = function(date){
+	// 	var dates = []
+	// 	var dates.day = date.getDate();
+	// 	var dates.month = date.getMonth() + 1;
+	// 	var dates.year = data.getFullYear();
+	// 	return dates;
+	// }
+
 
 
 

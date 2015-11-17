@@ -1,13 +1,16 @@
 body {
 	background-image: url('concrete_seamless.png');
-	background-size: cover;
-	background-repeat: no-repeat;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 h1 {
 	color: white;
 }
+
+.form {
+	width: 500px;
+}
+
 
 .jumbotron {
 	background-image: url('bevo.png');
@@ -37,11 +40,6 @@ img {
 	border-radius: 20px;
 }
 
-/*.listings-page {
-	display:flex;
-	flex-direction: column;
-	text-align: center;
-}*/
 
 .homeTextBox {
 	font-size: 10px;
@@ -54,18 +52,6 @@ img {
 	border-radius: 25px;
 	opacity: 0.7;
 }
-
-
-/*.listing {
-	text-align: center;
-	width: 50%;
-	background-color: #2EC2A8;
-	border-radius: 20px;
-	border-color: black;
-	margin-bottom: 10px;
-	display: flex;
-	flex-direction: row;
-}*/
 
 .weather {
 	float: left;

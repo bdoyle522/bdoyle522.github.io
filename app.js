@@ -1,7 +1,7 @@
-var app = angular.module('longhornSublease', ['ui.router', 'firebase']);
+var app = angular.module('longhornSublease', ['ui.router', 'firebase', 'ngAnimate']);
 
 app.constant('fb', {
-	url: 'https://longhornsublease.firebaseio.com/'
+	url: 'https://longhornsublease.firebaseio.com/posts/'
 });
 
 app.config(function($stateProvider, $urlRouterProvider){
@@ -38,7 +38,8 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller: 'postingCtrl',
 			resolve: {
 				postingRef: function($stateParams, postingService){
-					return postingService.getPost(postId);
+					console.log($stateParams.postId);
+					return postingService.getPost($stateParams.postId);
 				},
 			}
 		});

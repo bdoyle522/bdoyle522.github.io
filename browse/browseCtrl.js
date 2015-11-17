@@ -4,9 +4,6 @@ app.controller('browseCtrl', function($scope, $firebaseArray, $firebaseObject, l
 	
 	$scope.listings = $firebaseArray(listingsRef);
 
-	
-	
-
 	$scope.order = function () {
 		$scope.predicate = 'Location';
 		console.log($scope.listings);

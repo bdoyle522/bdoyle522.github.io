@@ -1,13 +1,26 @@
 <div>
 
 <h1>List Your Apartment</h1>
-<form class="form-group">
-
+<form class="form-group" name="subletForm">
+    <div class="row">
+        <div class="col-md-2">
+            <p class="input-group">
+            <label for="startDate">Start Date:</label>
+              <input type="date" id="startDate" class="form-control" uib-datepicker-popup ng-model="dt.start" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"ng-required="true" close-text="Close" required/>
+            </p>
+        </div>
+        <div class="col-md-2">
+            <p class="input-group">
+            <label for="endDate">End Date:</label>
+              <input type="date" id="endDate" class="form-control" uib-datepicker-popup ng-model="dt.end" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" required/>
+            </p>
+        </div>
+    </div>
 	<select class="form-control" ng-model="apartment.location" ng-options="location for location in locations" required>
 		<option value="">Location</option>
 	</select>
 	<input class="form-control" ng-model="apartment.complex" type="text" placeholder="Apartment Complex" required>
-	<input class="form-control" ng-model="apartment.rent" type="text" placeholder="Monthly Rent" required>
+	<input type="number" class="form-control" ng-model="apartment.rent" type="text" placeholder="Monthly Rent" required>
 	<select class="form-control" ng-model="apartment.sex" ng-options="sex for sex in sexes" required>
 		<option value="">Male/Female</option>
 	</select>
@@ -20,7 +33,9 @@
 	<select class="form-control" ng-model="apartment.washer" ng-options="option for option in washOptions" required>
 		<option value="">Washer/Dryer</option>
 	</select>
-	<button ng-click="submitApartment(apartment)" class="btn-success" ui-sref='browse'>Post Sublet</button>
+	<textarea class="form-control" rows="5" ng-model="apartment.description" type="text" placeholder="Description" required></textarea>
+	<button ng-click="submitApartment(apartment)" type="submit" class="btn-success" ui-sref='browse'>Post Sublet</button>
+	<button class="btn-failure" ui-sref='home'>Cancel</home>
 
 </form>
 

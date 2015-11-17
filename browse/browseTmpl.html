@@ -6,27 +6,28 @@
 	<thead>
 		<tr>
 			<th> </th>
-			<th>Location</a>
+			<th>Description</a>
 			</th>
 			<th>
-				Bathroom
+				Monthly Rent
 			</th>
 			<th>
-				Rent
-			</th>
-			<th>
-				Sex
+				M/F
 			</th>
 		</tr>
 	</thead>
 	<tbody>
-		<input type="text" ng-model="search" placeholder="Search...">
+		<input type="text" ng-model="search" placeholder="Search complex or rent...">
 		<tr ng-repeat="list in listings | filter: search">
 			<td>
 			<img class="img-responsive" src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
-			<td><h2><a ui-sref='posting({postId: list.newApartment.$id})'>
-				{{list.newApartment.complex}}<small>({{list.newApartment.location}})</small></a><h2></td>
-			<td>{{list.newApartment.bathroom}}</td>
+			<td>
+				<dl><a ui-sref="posting({postId: list.$id})">
+				<dd>{{list.newApartment.complex}}</dd></a>
+				<dd><em><small>({{list.newApartment.location}})</small></em></dd>
+				<dd><small>{{list.newApartment.description}}</small></dd>
+				</dl>
+			</td>
 			<td>${{list.newApartment.rent}}</td>
 			<td>{{list.newApartment.sex}}</td>
 		</tr>
