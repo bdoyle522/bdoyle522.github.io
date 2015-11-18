@@ -14,8 +14,37 @@ body {
 .jumbotron {
 	background-image: url('bevo.png');
 	background-size: cover;
+	color: white;
 	/*padding-top: 50px;*/
 }
+
+.home-text {
+	color: white;
+}
+
+.link-color {
+	color: #CC5500;
+}
+
+.link-color:hover {
+	color: #CC5500;
+	text-decoration: underline;
+}
+
+.panel > .panel-heading {
+	background-image: none;
+	color: #CC5500;
+}
+
+.panel-default > .panel-body {
+	font-size: 15px;
+}
+
+/*.current {
+  color: #CC5500;
+  text-decoration: underline;
+}*/
+
 
 /*.heading {
 	width: 100%;

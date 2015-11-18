@@ -1,6 +1,6 @@
 var app = angular.module('longhornSublease');
 
-app.controller('homeCtrl', function($scope, currentWeather){
+app.controller('homeCtrl', function($scope, currentWeather, loginService){
 
 	var randyQuotes = [
 		"Yeah, let's do that! We've got an economy in the toilet, a big election coming up, but this country's #1 priority should be making football safer!",
@@ -17,6 +17,10 @@ app.controller('homeCtrl', function($scope, currentWeather){
 
 
 	$scope.weather = currentWeather;
+
+	$scope.logout = function() {
+		loginService.logout();
+	}
 
 
 });

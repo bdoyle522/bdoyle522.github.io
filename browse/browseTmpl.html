@@ -8,31 +8,27 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#">Longhorn Subleasing</a>
+	          <a class="navbar-brand" ui-sref="home">Longhorn Subleasing</a>
 	        </div>
 	        <div id="navbar" class="collapse navbar-collapse">
 	          <ul class="nav navbar-nav">
-	            <li class="active"><a href="#">Home</a></li>
+	            <li><a ui-sref="home">Home</a></li>
 	            <li><a href="#about">About</a></li>
 	            <li><a href="#contact">Contact</a></li>
 	          </ul>
 	        </div>
 	      </div>
 	</nav>
-<h1>Sublet Finder</h1>
+<h1>Apartment Finder</h1>
 
 <table class="table active">
 	<thead>
 		<tr>
 			<th> </th>
-			<th>Description</a>
-			</th>
-			<th>
-				Monthly Rent
-			</th>
-			<th>
-				M/F
-			</th>
+			<th>Description</a></th>
+			<th>Monthly</th>
+			<th>M/F</th>
+			<th>Date Available</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -41,7 +37,7 @@
 			<td>
 			<img class="thumbnail" src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
 			<td>
-				<dl><a ui-sref="posting({postId: list.$id})">
+				<dl><a class="link-color" ui-sref="posting({postId: list.$id})">
 				<dd>{{list.newApartment.complex}}</dd></a>
 				<dd><em><small>({{list.newApartment.location}})</small></em></dd>
 				<dd><small>{{list.newApartment.description}}</small></dd>
@@ -49,6 +45,7 @@
 			</td>
 			<td>${{list.newApartment.rent}}</td>
 			<td>{{list.newApartment.sex}}</td>
+			<td>{{list.newApartment.startDate.month}}/{{list.newApartment.startDate.year}} - {{list.newApartment.endDate.month}}/{{list.newApartment.endDate.year}}</td>
 		</tr>
 	</tbody>
 </table>

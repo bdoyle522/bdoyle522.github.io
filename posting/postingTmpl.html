@@ -1,56 +1,85 @@
 <div class="container">
-<div class="row">
-	<h1>{{listing.newApartment.location}}</h1>
-	<h2>{{listing.newApartment.complex}}</h2>
-	<h3>{{listing.newApartment.startDate}} - {{listing.newApartment.endDate}}<h3>
-	
-</div>
-<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">Longhorn Subleasing</a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a ui-sref="home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
           </div>
         </div>
-        <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
+  </nav>
+  <div class="container">
+  	<h1>{{listing.newApartment.complex}}</h1>
+    <h4><small>({{listing.newApartment.location}})</small></h4>
+  	<h3>{{listing.newApartment.startDate.month}}/{{listing.newApartment.startDate.day}}/{{listing.newApartment.startDate.year}} - {{listing.newApartment.endDate.month}}/{{listing.newApartment.endDate.day}}/{{listing.newApartment.endDate.year}}</h3>
+    <h4>${{listing.newApartment.rent}}/month<h4>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Description</div>
+        <div class="panel-body">{{listing.newApartment.description}}</div>
+    </div>
+
+    <div class="row">
+      <div class ="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Male/Female</div>
+            <div class="panel-body">{{listing.newApartment.sex}}</div>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-</div> -->
+
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Pets:</div>
+            <div class="panel-body">{{listing.newApartment.pets}}</div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Washer/Dryer:</div>
+            <div class="panel-body">{{listing.newApartment.washer}}</div>
+        </div>
+      </div>
+  </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Bathroom</div>
+        <div class="panel-body">{{listing.newApartment.bathroom}}</div>
+    </div>
+<!-- 
+
+
+      <ul class="list-group-item">
+        <strong>Male/Female:</strong> {{listing.newApartment.sex}}
+      </ul>
+      <ul class="list-group-item">
+        <strong>Pets:</strong> {{listing.newApartment.pets}}
+      </ul>
+      <ul class="list-group-item">
+        <strong>Washer/Dryer:</strong> {{listing.newApartment.washer}}
+      </ul>
+      <ul class="list-group-item">
+        <strong>Bathroom:</strong> {{listing.newApartment.bathroom}}
+      </ul>
+    </ul>
+ -->
+
+
+    </div>
+  </div>
+
 </div>

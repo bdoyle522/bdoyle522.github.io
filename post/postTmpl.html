@@ -1,7 +1,4 @@
 <div class="container" ng-app="longhornSublease">
-
-
-
 	<nav class="navbar navbar-default navbar-fixed-top">
 	      <div class="container-fluid">
 	        <div class="navbar-header">
@@ -63,8 +60,10 @@
 
 		</div>
 
-
-		<input type="number" class="form-control form-group" ng-model="apartment.rent" type="text" placeholder="Monthly Rent" required/>
+		<div class="form-group input-group">
+			<span class="input-group-addon">$</span>
+			<input type="number" class="form-control form-group" ng-model="apartment.rent" type="text" placeholder="Monthly Rent" required/>
+		</div>
 
 		<select class="form-control form-group" ng-model="apartment.pets" ng-options="option for option in petOptions" required>
 			<option value="">Pets</option>

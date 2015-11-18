@@ -4,6 +4,17 @@ app.constant('fb', {
 	url: 'https://longhornsublease.firebaseio.com/posts/'
 });
 
+app.run(["$rootScope", "$state", function($rootScope, $state) {
+	$rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
+  	// We can catch the error thrown when the $requireAuth promise is rejected
+  	// and redirect the user back to the home page
+  		if (error === "AUTH_REQUIRED") {
+    	$state.go('login');
+  	}
+	});
+}]);
+
+
 app.config(function($stateProvider, $urlRouterProvider){
 
 	$stateProvider
@@ -21,6 +32,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 			url: '/postSublet',
 			templateUrl: 'post/postTmpl.html',
 			controller: 'postCtrl',
+			resolve: {
+				currentAuth: function(Auth){
+					return Auth.$requireAuth();
+				},
+			}
 		})
 		.state('browse', {
 			url: '/browse',
@@ -42,6 +58,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 					return postingService.getPost($stateParams.postId);
 				},
 			}
+		})
+		.state('login', {
+			url: '/login',
+			templateUrl: 'login/loginTmpl.html',
+			controller: 'loginCtrl'
 		});
 
 	$urlRouterProvider.otherwise('/');

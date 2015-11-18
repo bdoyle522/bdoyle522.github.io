@@ -8,6 +8,5 @@ app.controller('postingCtrl', function($scope, postingService, postingRef, $fire
 	$scope.listing = listing;
 	console.log(listing);
 
-	
 
 });
