@@ -1,7 +1,6 @@
-/*body {
-	background-image: url('concrete_seamless.png');
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}*/
+body {
+	padding-top: 75px;
+}
 
 /*h1 {
 	color: white;
@@ -15,13 +14,13 @@
 .jumbotron {
 	background-image: url('bevo.png');
 	background-size: cover;
-	padding-top: 50px;
+	/*padding-top: 50px;*/
 }
 
 /*.heading {
 	width: 100%;
 }*/
-
+/*
 .homeTitle {
 	font-size: 30px;
 	text-align: center;
@@ -32,13 +31,15 @@
 	background-color: white;
 	opacity: 0.7;
 	border-radius: 25px;
-}
+}*/
 
 img {
 	float: left;
 	max-height: 100px;
 	border-radius: 5px;
 }
+
+
 
 
 .homeTextBox {

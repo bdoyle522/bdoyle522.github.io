@@ -1,53 +1,65 @@
 <div class="container">
-<div class="nav">
-<!-- 	<img src="http://openweathermap.org/img/w/{{weather.icon}}.png">
-	<div>
 
-		{{weather.main}}
-	</div> -->
-</div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">Longhorn Subleasing</a>
+	        </div>
+	        <div id="navbar" class="collapse navbar-collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="#about">About</a></li>
+	            <li><a href="#contact">Contact</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	</nav>
 
-<div class="jumbotron">
+	<div class="jumbotron">
 
-	<h1 class="homeTitle">Longhorn Subleasing</h1>
-	<div class="homeTextBox">
-	Ease of connection for college students that want to sublet their apartment or room, or want to rent an apartment or room, for less than the typical year-long lease period. No fee, just a simple way to guarantee you won't be contacted by a sketchball off craigslist
+		<h1>Solve your year long lease problem in 5 minutes</h1>
+		<div>
+		Ease of connection for college students that want to sublet their apartment or room, or want to rent an apartment or room, for less than the typical year-long lease period. No fee, just a simple way to guarantee you won't be contacted by a sketchball off craigslist
+		</div>
+
 	</div>
 
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-4">
-			<h2>Find a Renter</h2>
-			Did you finish up school a semester earlier than you thought? Are you planning on studying abroad for a semester but you're locked into a full year?
-			<div>
-				<a ui-sref='postSublet' class="btn btn-default">Post a Listing</a>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Find a Renter</h2>
+				Did you finish up school a semester earlier than you thought? Are you planning on studying abroad for a semester but you're locked into a full year?
+				<div>
+					<a ui-sref='postSublet' class="btn btn-default">Post a Listing</a>
+				</div>
 			</div>
-		</div>
-		<div class="col-md-4"> 
-			<h2>Find A Short Term Lease</h2>
-			Did you decide to take on an extra minor? Want to see at least one successful football season? Fail macro?
-			<div>
-				<a ui-sref='browse' class="btn btn-default">Browse Listings</a>
+			<div class="col-md-4"> 
+				<h2>Find A Short Term Lease</h2>
+				Did you decide to take on an extra minor? Want to see at least one successful football season? Fail macro?
+				<div>
+					<a ui-sref='browse' class="btn btn-default">Browse Listings</a>
+				</div>
 			</div>
-		</div>
-		<div class="col-md-4"> 
-			<h2>Why Am I Here?</h2>
-			Did you come across this website by accident? Do you want to feel like you came away with something from visiting this site?
-			<div>
-				<a class="btn btn-default" ng-click="randy()">Randy Marsh</a>
+			<div class="col-md-4"> 
+				<h2>Why Am I Here?</h2>
+				Did you come across this website by accident? Do you want to feel like you came away with something from visiting this site?
+				<div>
+					<a class="btn btn-default" ng-click="randy()">Randy Marsh</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div ng-show="showQuote" class="homeTextBox">
+	<div ng-show="showQuote" class="homeTextBox">
 
-	<h1>{{randyQuote}}<h1>
+		<h1>{{randyQuote}}<h1>
 
-</div>
-
-</div>
+	</div>
 
 </div>
