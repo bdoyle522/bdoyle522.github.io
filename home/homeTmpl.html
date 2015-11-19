@@ -22,7 +22,6 @@
 	          </ul>
 	          <ul class="nav navbar-nav navbar-right">
 	          	<li logout-button><a ng-click="logout()" ui-sref="login">Logout</a></li>
-<!-- 	          	<li><a ui-sref="login" ng-hide="loggedIn">Login</a></li> -->
 	          </ul>
 
 	        </div>
@@ -31,39 +30,42 @@
 
 	<div class="jumbotron">
 
-		<h1>Solve your year long lease problem in 5 minutes</h1>
+		<h1>Sublease</h1>
+		<hr></hr>
 		<div class="home-text">
-		Ease of connection for college students that want to sublet their apartment or room, or want to rent an apartment or room, for less than the typical year-long lease period. No fee, just a simple way to guarantee you won't be contacted by a sketchball off craigslist
+		Connecting college students from the University of Texas, St. Edwards, and Austin Community College.
 		</div>
 
 	</div>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-sm-4">
 				<h2>Find a Renter</h2>
-				Did you finish up school a semester earlier than you thought? Are you planning on studying abroad for a semester but you're locked into a full year?
+				Finish a semester earlier than you thought? Planning on studying abroad for a semester but you're locked into a full year?
 				<div>
 					<a ui-sref='postSublet' class="btn btn-default">Post a Listing</a>
 				</div>
 			</div>
 <!-- 			<button class="btn" ng-click="logout()">Logout</button> -->
-			<div class="col-md-4"> 
-				<h2>Find A Short Term Lease</h2>
+			<div class="col-sm-4"> 
+				<h2>Find A Lease</h2>
 				Did you decide to take on an extra minor? Want to see at least one successful football season? Fail macro?
 				<div>
 					<a ui-sref='browse' class="btn btn-default">Browse Listings</a>
 				</div>
 			</div>
-			<div class="col-md-4"> 
-				<h2>Sign Up to Create A Listing</h2>
-				Did you come across this website by accident? Do you want to feel like you came away with something from visiting this site?
+
+			<div class="col-sm-4">
+				<h2>Sign Up</h2>
+				To guarantee that you'll only be interacting with other college students, sign up here with your college email address.
 				<div>
 					<a ui-sref="login" class="btn btn-default">Sign Up</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<hr></hr>
 
 	<div ng-show="showQuote" class="homeTextBox">
 

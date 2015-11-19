@@ -22,14 +22,10 @@
 	        </div>
 	      </div>
 	</nav>
-
-	<h1>Login and Signup Page</h1>
-
-	
-
-	<form class="form-horizontal" ng-submit="createUser(user)">
+	<div class="row">
+	<form class="form-horizontal col-sm-6" ng-submit="createUser(user)">
   		<fieldset>
-	    	<legend>Signup Here</legend>
+	    	<legend>Signup</legend>
 	    	<div class="form-group">
 	      		<label for="inputEmail" class="col-lg-2 control-label">Email</label>
 	      		<div class="col-lg-10">
@@ -55,9 +51,9 @@
 		     </div>
       	</fieldset>
       </form>
-    <form class="form-horizontal" ng-submit="log(login)">
+    <form class="form-horizontal col-sm-6" ng-submit="log(login)">
   		<fieldset>
-	    	<legend>Login Here</legend>
+	    	<legend>Login</legend>
 	    	<div class="form-group">
 	      		<label for="inputEmail" class="col-lg-2 control-label">Email</label>
 	      		<div class="col-lg-10">
@@ -77,6 +73,7 @@
 		     </div>
       	</fieldset>
       </form>
+  	</div>
 
 
 

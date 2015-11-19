@@ -35,7 +35,7 @@
 		<input class="form-control" type="text" ng-model="search" placeholder="Search complex or rent...">
 		<tr ng-repeat="list in listings | filter: search">
 			<td>
-			<img class="thumbnail" src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
+			<img class="thumbnail" src='https://upload.wikimedia.org/wikipedia/commons/2/26/Southmoor_Apartment_Hotel.jpg'/>
 			<td>
 				<dl><a class="link-color" ui-sref="posting({postId: list.$id})">
 				<dd>{{list.newApartment.complex}}</dd></a>
@@ -50,6 +50,7 @@
 	</tbody>
 </table>
 
-<div>
-<a ui-sref='postSublet' class="listing">Post Your Sublet</a>
+<div class="container">
+<a ui-sref='postSublet' class="listing link-color">Post Your Sublet</a>
 </div>
+<hr></hr>

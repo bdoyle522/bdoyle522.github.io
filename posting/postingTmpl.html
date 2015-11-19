@@ -21,17 +21,18 @@
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6">
-  	 <h1>{{listing.newApartment.complex}}</h1>
-      <h4><small>({{listing.newApartment.location}})</small></h4>
-  	 <h3>{{listing.newApartment.startDate.month}}/{{listing.newApartment.startDate.day}}/{{listing.newApartment.startDate.year}} - {{listing.newApartment.endDate.month}}/{{listing.newApartment.endDate.day}}/{{listing.newApartment.endDate.year}}</h3>
-    <h4>${{listing.newApartment.rent}}/month<h4>
-    </div>
+      <div class="col-md-6">
+      	 <h1>{{listing.newApartment.complex}}</h1>
+          <h4><small>({{listing.newApartment.location}})</small></h4>
+      	 <h3>{{listing.newApartment.startDate.month}}/{{listing.newApartment.startDate.day}}/{{listing.newApartment.startDate.year}} - {{listing.newApartment.endDate.month}}/{{listing.newApartment.endDate.day}}/{{listing.newApartment.endDate.year}}</h3>
+        <h4>Monthly: ${{listing.newApartment.rent}}</h4>
+      </div>
 
-    <div class="col-sm-6">
-      <img class="thumbnail" src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
+      <div class="col-md-6">
+        <img src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
+      </div>
     </div>
-    </div>
+    <hr></hr>
 
 
     <div class="panel panel-default">
@@ -68,24 +69,6 @@
       <div class="panel-heading">Bathroom</div>
         <div class="panel-body">{{listing.newApartment.bathroom}}</div>
     </div>
-<!-- 
-
-
-      <ul class="list-group-item">
-        <strong>Male/Female:</strong> {{listing.newApartment.sex}}
-      </ul>
-      <ul class="list-group-item">
-        <strong>Pets:</strong> {{listing.newApartment.pets}}
-      </ul>
-      <ul class="list-group-item">
-        <strong>Washer/Dryer:</strong> {{listing.newApartment.washer}}
-      </ul>
-      <ul class="list-group-item">
-        <strong>Bathroom:</strong> {{listing.newApartment.bathroom}}
-      </ul>
-    </ul>
- -->
-
 
     </div>
   </div>
