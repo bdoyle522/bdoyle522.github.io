@@ -7,7 +7,6 @@ app.service('loginService', function (fb, $firebaseAuth) {
 	var auth = $firebaseAuth(ref);
 	
 	this.signup = function (newUser) {
-		console.log('here');
 		return auth.$createUser(newUser);
 	};
 
