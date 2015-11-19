@@ -1,18 +1,23 @@
 var app = angular.module('longhornSublease');
 
-app.directive('loginValidation', function(){
+app.directive('logoutButton', function(){
 	return {
-		require: 'ngModel',
+		restrict: 'A',
 		scope: {
-			passwordVerify: '='
+			loggedIn: '=',
+			thing: '='
 		},
-		link: function(scope, elements, attributes, ctrl){
-			var me = attrs.ngModel;
-			var matchTo = attrs.pwCheck;
-
-			scope.$watch('[me, matchTo', function(value){
-				ctrl.$setValidity('pwmatch', scope[me] === scope[matchTo]);
-			});
+		controller: function($scope, loginService){
+			$scope.thing = 'Login';
+			$scope.loggedIn = loginService.getAuth();
+			console.log($scope.loggedIn);
+		},
+		link: function(scope, elements, attributes, loginService){
+			elements.css('display', 'none');
+			console.log(elements);
+			if(scope.loggedIn){
+				elements.css('display', 'inline');
+			}
 		}
 	}
 });

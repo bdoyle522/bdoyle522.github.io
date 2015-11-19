@@ -21,7 +21,7 @@ app.service('loginService', function (fb, $firebaseAuth) {
 
 	this.logout = function () {
 		return auth.$unauth();
-	}
+	};
 
 	
 })

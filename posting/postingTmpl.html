@@ -19,11 +19,19 @@
           </div>
         </div>
   </nav>
-  <div class="container">
-  	<h1>{{listing.newApartment.complex}}</h1>
-    <h4><small>({{listing.newApartment.location}})</small></h4>
-  	<h3>{{listing.newApartment.startDate.month}}/{{listing.newApartment.startDate.day}}/{{listing.newApartment.startDate.year}} - {{listing.newApartment.endDate.month}}/{{listing.newApartment.endDate.day}}/{{listing.newApartment.endDate.year}}</h3>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+  	 <h1>{{listing.newApartment.complex}}</h1>
+      <h4><small>({{listing.newApartment.location}})</small></h4>
+  	 <h3>{{listing.newApartment.startDate.month}}/{{listing.newApartment.startDate.day}}/{{listing.newApartment.startDate.year}} - {{listing.newApartment.endDate.month}}/{{listing.newApartment.endDate.day}}/{{listing.newApartment.endDate.year}}</h3>
     <h4>${{listing.newApartment.rent}}/month<h4>
+    </div>
+
+    <div class="col-sm-6">
+      <img class="thumbnail" src='http://media-cdn.tripadvisor.com/media/photo-s/01/be/64/50/stadtnest-bed-breakfast.jpg'/>
+    </div>
+    </div>
 
 
     <div class="panel panel-default">

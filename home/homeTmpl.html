@@ -18,8 +18,13 @@
 	        		<a class="btn" ui-sref="login">Login</a>
 	    		</li>
 	            <li><a href="#about">About</a></li>
-	            <li><a href="#contact">Contact</a></li>
+	           	<li><a href="#contact">Contact</a></li>         
 	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	          	<li logout-button><a ng-click="logout()" ui-sref="login">Logout</a></li>
+<!-- 	          	<li><a ui-sref="login" ng-hide="loggedIn">Login</a></li> -->
+	          </ul>
+
 	        </div>
 	      </div>
 	</nav>
@@ -42,7 +47,7 @@
 					<a ui-sref='postSublet' class="btn btn-default">Post a Listing</a>
 				</div>
 			</div>
-			<button class="btn" ng-click="logout()">Logout</button>
+<!-- 			<button class="btn" ng-click="logout()">Logout</button> -->
 			<div class="col-md-4"> 
 				<h2>Find A Short Term Lease</h2>
 				Did you decide to take on an extra minor? Want to see at least one successful football season? Fail macro?

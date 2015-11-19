@@ -17,10 +17,11 @@ app.controller('homeCtrl', function($scope, currentWeather, loginService){
 
 
 	$scope.weather = currentWeather;
-
+	$scope.loggedIn = true;
 	$scope.logout = function() {
 		loginService.logout();
-	}
+		$scope.loggedIn = false;
+	};
 
 
 });
