@@ -9,4 +9,5 @@ app.controller('postingCtrl', function($scope, postingService, postingRef, $fire
 	console.log(listing);
 
 
+
 });

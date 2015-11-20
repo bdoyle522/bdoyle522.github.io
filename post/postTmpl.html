@@ -75,9 +75,27 @@
 			<option value="">Washer/Dryer</option>
 		</select>
 		<textarea class="form-control form-group" rows="5" ng-model="apartment.description" type="text" placeholder="Description" required></textarea>
+
+
+
+		Image Upload
+		<!-- <button class="form-control form-group" type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+          accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">Select Images</button> -->
+          <!-- <div style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
+      	<span class="progress" ng-show="f.progress >= 0">
+          <div style="width:{{f.progress}}%"  
+               ng-bind="f.progress + '%'"></div>
+      	</span>
+
+  		</div>   -->
+
+
+
+
+
 		<button type="submit" class="btn btn-default" >Post Sublet</button>
 		<button class="btn btn-default" ui-sref='home'>Cancel</button>
-
+		
 	</form>
 
 

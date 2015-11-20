@@ -1,4 +1,4 @@
-var app = angular.module('longhornSublease', ['ui.router', 'firebase', 'ngAnimate']);
+var app = angular.module('longhornSublease', ['ui.router', 'firebase', 'ngAnimate', 'ngFileUpload']);
 
 app.constant('fb', {
 	url: 'https://longhornsublease.firebaseio.com/posts/'
@@ -63,6 +63,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 			url: '/login',
 			templateUrl: 'login/loginTmpl.html',
 			controller: 'loginCtrl'
+		})
+		.state('signup', {
+			url: '/signup',
+			templateUrl: 'signup/signupTmpl.html',
+			controller: 'signupCtrl'
 		});
 
 	$urlRouterProvider.otherwise('/');
