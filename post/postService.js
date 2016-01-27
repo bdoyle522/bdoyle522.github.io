@@ -7,6 +7,7 @@ app.service('postService', function($firebase){
 	var bathrooms = ['Private', 'Shared'];
 	var petOptions = ['No Pets', 'Pets Allowed (No Deposit)', 'Pets Allowed (Deposit Required)'];
 	var washOptions = ['Built In Washer/Dryer','Community Laundry Room', 'None'];
+	var parkOptions = ['No Parking', 'Parking Included', 'Parking Extra $'];
 
 	this.getLocations = function() {
 		return locations;
@@ -27,6 +28,10 @@ app.service('postService', function($firebase){
 	this.getWashOptions = function () {
 		return washOptions;
 	};
+
+	this.getParkOptions = function () {
+		return parkOptions;
+	}
 
 	// this.getDate = function(date){
 	// 	var dates = []

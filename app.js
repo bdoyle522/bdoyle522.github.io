@@ -1,4 +1,4 @@
-var app = angular.module('longhornSublease', ['ui.router', 'firebase', 'ngAnimate', 'ngFileUpload']);
+var app = angular.module('longhornSublease', ['ui.router', 'firebase', 'ngFileUpload', 'ui.bootstrap','ui.bootstrap.datepicker']);
 
 app.constant('fb', {
 	url: 'https://longhornsublease.firebaseio.com/posts/'

@@ -12,14 +12,17 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
 
 	$scope.washOptions = postService.getWashOptions();
 
-	
+	$scope.parkOptions = postService.getParkOptions();
+
 	var ref = new Firebase('https://longhornsublease.firebaseio.com/posts');
 	var listing = $firebaseArray(ref);
 
 	$scope.submitApartment = function(newApartment) {
-    console.log(newApartment);
+
+
 		newApartment.startDate = dateConvert($scope.dt.start);
 		newApartment.endDate = dateConvert($scope.dt.end);
+		newApartment.photo = $scope.userUpload;
 		console.log(newApartment);
 		listing.$add({
 			newApartment
@@ -48,15 +51,6 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
     	$scope.dt = null;
   	};
 
-  	$scope.toggleMin = function() {
-    	$scope.minDate = $scope.minDate ? null : new Date();
-  	};
-  	$scope.maxDate = new Date(2020, 5, 22);
-
-  	$scope.open = function($event) {
-    	$scope.status.opened = true;
-  	};
-
   	$scope.setDate = function(year, month, day) {
     	$scope.dt = new Date(year, month, day);
   	};
@@ -64,84 +58,20 @@ app.controller('postCtrl', function($scope, postService, $firebaseArray, $fireba
     $scope.date = '11/17/2015';
 
 
-  	$scope.dateOptions = {
-    	formatYear: 'yy',
-    	startingDay: 1
-  	};
-
-  	$scope.format = 'dd-MMMM-yyyy';
-
-  	$scope.status = {
-   		opened: false
-  	};
-
-
-
-  	var tomorrow = new Date();
-  	tomorrow.setDate(tomorrow.getDate() + 1);
-  	var afterTomorrow = new Date();
-  	afterTomorrow.setDate(tomorrow.getDate() + 2);
-  	$scope.events =
-    [
-      {
-        date: tomorrow,
-        status: 'full'
-      },
-      {
-        date: afterTomorrow,
-        status: 'partially'
-      }
-    ];
-
-    $scope.disabled = function(date, mode) {
-    	return ( mode === 'day' && ( today.getDay()) );
-  	};
-
-  	$scope.getDayClass = function(date, mode) {
-    	if (mode === 'day') {
-      		var dayToCheck = new Date(date).setHours(0,0,0,0);
-
-      		for (var i=0;i<$scope.events.length;i++){
-        		var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
-
-        		if (dayToCheck === currentDay) {
-          			return $scope.events[i].status;
-        		}	
-      		}
-    	}
-
-    return '';
-  	};
-
-
-
-
     //Image Upload
-
-    // $scope.uploadFiles = function(file, errFiles) {
-    //     $scope.f = file;
-    //     $scope.errFile = errFiles && errFiles[0];
-    //     if (file) {
-    //         file.upload = Upload.upload({
-    //             url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
-    //             data: {file: file}
-    //         });
-
-    //         file.upload.then(function (response) {
-    //             $timeout(function () {
-    //                 file.result = response.data;
-    //             });
-    //         }, function (response) {
-    //             if (response.status > 0)
-    //                 $scope.errorMsg = response.status + ': ' + response.data;
-    //         }, function (evt) {
-    //             file.progress = Math.min(100, parseInt(100.0 * 
-    //                                      evt.loaded / evt.total));
-    //         });
-    //     }   
-    // }
-
-	
+		$scope.fileChanged = function(){
+			$scope.userUpload = {};
+			var fr = new FileReader();
+			var imgFileInput = document.getElementById('file-upload');
+			var imgFile = imgFileInput.files[0];
+			fr.readAsDataURL(imgFile);
+			fr.onload = function(e){
+				$scope.$apply(function() {
+            $scope.userUpload = fr.result;
+            console.log($scope.userUpload)
+        });
+			}
+		}
 
 
 });
